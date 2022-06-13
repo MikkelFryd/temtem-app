@@ -5,11 +5,11 @@ import "./App.css"
 
 function App() {
   return (
-    <HashRouter>
+    <HashRouter basename="/">
       <Routes>
-        <Route path="/" element={<Home/>}/>
         <Route path="/temtems" element={<Temtems/>}/>
         <Route path="/home" element={<Home/>}/>
+        <Route path="/" element={<Home/>}/>
       </Routes>
     </HashRouter>
   );
