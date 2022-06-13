@@ -1,0 +1,17 @@
+
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    height: 50px;
+    background-color: dimgray;
+    width: 100%;
+    align-items: center;
+    backdrop-filter: blur(6px);
+    margin-bottom: 2vh;
+    a {
+        text-decoration: none;
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+}

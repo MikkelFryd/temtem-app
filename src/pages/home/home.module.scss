@@ -1,0 +1,43 @@
+
+
+.homecontainer {
+    background-image: url("../../assets/images/original.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    .homesection {
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        margin-top: 8vh;
+        img {
+            width: 100%;
+            height: auto;
+            margin: auto;
+        }
+        .buttoncontainer {
+            width: 60%;
+            padding: 6px;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 1rem;
+            margin: auto;
+            a {
+                width: 60%;
+                border-radius: 8px;
+                padding: 8px;
+                margin: auto;
+                border: none;
+                background-color: #fff;
+                border: 2px solid turquoise;
+                font-size: 1rem;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background-color: skyblue;
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+}

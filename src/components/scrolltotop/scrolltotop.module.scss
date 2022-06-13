@@ -1,0 +1,20 @@
+
+
+.scrollcomponent {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    background-image: url(../../assets/images/down-arrow.png);
+    // background-color: #333;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    border-radius: 8px;
+    border: 2px solid #333;
+    transform: rotate(180deg);
+    color: #333;
+    height: 30px;
+    width: 30px;
+    padding: 0px;
+    margin: 0px;
+}

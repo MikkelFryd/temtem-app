@@ -1,0 +1,57 @@
+
+.backside {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 400px;
+    margin: auto;
+    padding: 4px;
+    background-color: white;
+    border-radius: 8px;
+    ul {
+        list-style: none;
+        padding: 4px;
+        color: #333;
+        align-items: center;
+        border: 1px solid #333;
+        border-radius: 8px;
+        margin: 4px;
+        justify-content: center;
+        h4 {
+            color: #333;
+            margin: 8px;
+        }
+    }
+    .evolutioncontainer {
+        display: grid;
+        color: #333;
+        padding: 4px;
+        p {
+            margin: 0;
+            color: #333;
+        }
+    }
+    .techniquecontainer {
+        display: grid;
+        color: #333;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin-bottom: 4px;
+        border: 1px solid #333;
+        border-radius: 8px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .traitscontainer {
+        display: grid;
+        color: #333;
+        grid-template-columns: 1fr 1fr;
+    }
+    .typescontainer {
+        display: grid;
+        color: #333;
+        grid-template-columns: 1fr 1fr;
+        b {
+            text-align: center;
+            margin: auto;
+        }
+    }
+}
