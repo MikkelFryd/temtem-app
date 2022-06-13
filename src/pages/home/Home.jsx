@@ -1,6 +1,7 @@
 import { Nav } from "../../components/nav/Nav"
 import Style from "./home.module.scss"
 import Logo from "../../assets/images/Logo.png"
+import {Link} from 'react-router-dom'
 
 export const Home = () => {
     return (
@@ -9,9 +10,9 @@ export const Home = () => {
         <div className={Style.homesection}>
             <img src={Logo} alt="" />
             <div className={Style.buttoncontainer}>
-                <a href="/temtems">See all TemTems</a>
-                <a>Simulate TemTem battle</a>
-                <a>Compare TemTems</a>
+                <Link to="/temtems">See all temtems</Link>
+                <p>Simulate TemTem battle</p>
+                <p>Compare TemTems</p>
             </div>
         </div>
         </section>
