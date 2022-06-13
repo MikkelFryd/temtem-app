@@ -19,7 +19,7 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "temtem-app/index.html/",
+  "start_url": "temtem-app/",
   "scope": "./",
   "display": "standalone",
   "theme_color": "#000000",
