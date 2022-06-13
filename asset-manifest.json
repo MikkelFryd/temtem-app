@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/temtem-app/static/css/main.03189490.css",
+    "main.js": "/temtem-app/static/js/main.86d13c01.js",
+    "static/js/787.8e3665de.chunk.js": "/temtem-app/static/js/787.8e3665de.chunk.js",
+    "static/media/peakpx.jpg": "/temtem-app/static/media/peakpx.1e8c3faccaace7ee6782.jpg",
+    "static/media/original.jpg": "/temtem-app/static/media/original.f10cdfe4e4dd2e1b99f3.jpg",
+    "static/media/Logo.png": "/temtem-app/static/media/Logo.1f8d2c4fdb0d1ba23786.png",
+    "service-worker.js": "/temtem-app/service-worker.js",
+    "index.html": "/temtem-app/index.html",
+    "main.03189490.css.map": "/temtem-app/static/css/main.03189490.css.map",
+    "main.86d13c01.js.map": "/temtem-app/static/js/main.86d13c01.js.map",
+    "787.8e3665de.chunk.js.map": "/temtem-app/static/js/787.8e3665de.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.03189490.css",
+    "static/js/main.86d13c01.js"
+  ]
+}
