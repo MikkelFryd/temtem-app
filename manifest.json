@@ -1,6 +1,6 @@
 {
-  "short_name": "Tempedia",
-  "name": "Tempedia",
+  "short_name": "temtem-app",
+  "name": "temtem-app",
   "icons": [
     {
       "src": "Logo.ico",
@@ -19,7 +19,7 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "/",
+  "start_url": "https://mikk7021.github.io",
   "scope": "/",
   "display": "standalone",
   "theme_color": "#000000",
