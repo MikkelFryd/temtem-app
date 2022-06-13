@@ -1,6 +1,6 @@
 {
-  "short_name": "Tempedia",
-  "name": "Tempedia",
+  "short_name": "temtem-app",
+  "name": "temtem-app",
   "icons": [
     {
       "src": "Logo.ico",
@@ -19,8 +19,8 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "temtem-app/",
+  "scope": "./",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
