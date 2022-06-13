@@ -19,8 +19,8 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "https://mikk7021.github.io/",
-  "scope": "https://mikk7021.github.io/temtem-app/",
+  "start_url": "/",
+  "scope": "/temtem-app",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
