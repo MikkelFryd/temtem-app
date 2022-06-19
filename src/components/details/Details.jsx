@@ -36,7 +36,7 @@ export const Details = (props) => {
       return (
         <div className={Style.typescontainer}>
           <b>Type:</b>
-          <img src={images[`${item}.png`]} />
+          <img src={images[`${item}.png`]} alt={`Type: ${item}`} />
         </div>
       );
     }
@@ -70,7 +70,7 @@ export const Details = (props) => {
         </div>
         <div>
           {props.techniques &&
-            props.techniques.map((item, index) => {
+            props.techniques.slice(0, 5).map((item, index) => {
               return (
                 <div key={index} className={Style.techniquecontainer}>
                   <p>Technique: {item.name}</p>
