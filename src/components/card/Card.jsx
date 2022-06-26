@@ -22,6 +22,8 @@ export const Card = (props) => {
           types={props.types}
           techniques={props.techniques}
           traits={props.traits}
+          locations={props.locations}
+          weaknessdata={props.weaknessdata}
         />
       ) : (
         <Frontcard

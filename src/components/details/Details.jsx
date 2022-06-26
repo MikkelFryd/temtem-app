@@ -1,9 +1,11 @@
 import Style from "./details.module.scss";
+import { useState } from "react";
 
 export const Details = (props) => {
+
   function importAll(r) {
     let images = {};
-    r.keys().forEach((item, index) => {
+    r.keys().forEach((item) => {
       images[item.replace("./", "")] = r(item);
     });
     return images;
@@ -12,8 +14,6 @@ export const Details = (props) => {
   const images = importAll(
     require.context("../../assets/images", false, /\.(png|jpe?g|svg)$/)
   );
-
-  console.log(images);
 
   function isEvolvable(evolution) {
     if (evolution.evolves === true) {
@@ -31,16 +31,63 @@ export const Details = (props) => {
     }
   }
 
-  function handleIcon(item) {
-    if (item) {
-      return (
-        <div className={Style.typescontainer}>
-          <b>Type:</b>
-          <img src={images[`${item}.png`]} alt={`Type: ${item}`} />
-        </div>
-      );
+  function handleMatchups(){
+    let counters = props.types.map((item) => handleCounters(item)).flatMap((i) => i)
+    let cleanedStrength = []
+    let cleanedWeakness = []
+
+    if (counters.length > 1){
+      cleanedStrength = counters[0].strengths.filter(item => !counters[1].weaknesses.includes(item.key))
+      cleanedWeakness = counters[0].weaknesses.filter(item => !counters[1].strengths.includes(item.key))
+    }
+    else {
+      cleanedStrength = counters[0].strengths
+      cleanedWeakness = counters[0].weaknesses
+    }
+    console.log("counters: ", counters)
+    console.log("CleanedWeakness: ", cleanedWeakness)
+    console.log("CleanedStrength:", cleanedStrength)
+
+    return (
+      <div>
+        <h5>Strong against:</h5>
+        {cleanedStrength.map((item) => handleIcon(item.key))}
+        <h5>Weak against:</h5>
+        {cleanedWeakness.map((item) => handleIcon(item.key))}
+      </div>
+    )
+  }
+
+      
+      function handleCounters(item) {
+        let data = props.weaknessdata[item]
+        let weakArr = []
+        let strongArr = []
+
+        for (const [key, value] of Object.entries(data)) {
+          if (value === 0.5) {
+            weakArr.push({key, value})
+          }
+          if (value === 2) {
+            strongArr.push({key, value})
+          }
+        }
+        
+       return ({"weaknesses": weakArr, "strengths": strongArr})
+      }
+
+  
+   function handleIcon(item) {
+     if (item) {
+       return (
+         <div className={Style.typescontainer}>
+           <b>Type: {item}</b>
+           <img src={images[`${item}.png`]} alt={`Type: ${item}`} />
+         </div>
+       );
     }
   }
+
   return (
     <figure className={Style.backside}>
       <ul>
@@ -57,8 +104,17 @@ export const Details = (props) => {
       <figcaption>
         <div>
           {props.types &&
-            props.types.map((item, index) => {
-              return <>{handleIcon(item, index)}</>;
+            props.types.map((item) => {
+              return (handleIcon(item));
+            })}
+        </div>
+        <div className={Style.weaknesscontainer}>
+          {handleMatchups()}
+        </div>
+        <div className={Style.locationscontainer}>
+          {props.locations &&
+            props.locations.map((item, index) => {
+              return <p key={index}>Location: {item.island}</p>;
             })}
         </div>
         <div>{isEvolvable(props.evolution)}</div>
