@@ -1,5 +1,4 @@
 import Style from "./details.module.scss";
-import { useState } from "react";
 
 export const Details = (props) => {
 
