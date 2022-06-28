@@ -7,11 +7,13 @@ nav {
     background-color: dimgray;
     width: 100%;
     align-items: center;
-    backdrop-filter: blur(6px);
     margin-bottom: 2vh;
+    background-color: #2a2a2a;
     a {
         text-decoration: none;
         color: white;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-shadow: 1px 2px 2px #000, 0 -1px 2px #000, 0 1px 2px #000, -1px 2px 2px #000;
+        font-weight: 600;
     }
 }

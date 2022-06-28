@@ -52,7 +52,7 @@ export const ListTemTem = () => {
     <section className={Style.gridcontainer}>
       <form>
         <input placeholder="Search..." value={searchstring} onChange={(e) => handleSearch(e)} />
-        <button onClick={() => {clear()}} id="clear">clear</button>
+        <button onClick={() => {clear()}} id="clear">Reset</button>
       </form>
       {activesearch
         ? searchdata.map((item, index) => {
