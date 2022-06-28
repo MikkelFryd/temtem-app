@@ -1,31 +1,48 @@
 
 .backside {
     display: grid;
-    width: 95%;
+    width: 90%;
     margin: auto;
     padding: 4px;
     background-color: white;
     border-radius: 8px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    opacity: 90%;
     margin: auto;
-    background-color: #333;
+    background-color: #2a2a2a;
     ul {
         list-style: none;
-        padding: 4px;
+        padding: 8px;
         color: white;
         align-items: center;
         -webkit-box-shadow: 3px 3px 15px 0px #000000; 
         box-shadow: 3px 3px 15px 0px #000000;
         border-radius: 8px;
-        margin: 4px;
+        border: 1px solid #333;
+        margin: 0.3rem auto;
         display: flex;
-        gap: 0.3rem;
-        width: 94%;
-        font-size: 0.8rem;
+        width: 93%;
+        text-shadow: 1px 2px 2px #000, 0 -1px 2px #000, 0 1px 2px #000, -1px 2px 2px #000;
+        font-weight: 600;
+        font-size: 1rem;
+        background-color: #1bd1d4;
+        li {
+            margin: 2px;
+        }
         h4 {
             color: white;
             margin: 8px;
+        }
+    }
+    @media screen and (max-width: 420px) {
+        ul {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            width: 85%;
+            margin: auto;
+            color: #fff;
+            text-shadow: 1px 2px 2px #000, 0 -1px 2px #000, 0 1px 2px #000, -1px 2px 2px #000;
+            font-weight: 600;
+            font-size: 1rem;
         }
     }
     .evolutioncontainer {
@@ -38,14 +55,24 @@
         box-shadow: 3px 3px 15px 0px #000000;
         margin-bottom: 0.5rem;
         border-radius: 8px;
+        background-color: #1bd1d4;
         p {
             margin: 0;
             color: white;
+            color: #fff;
+            text-shadow: 1px 2px 2px #000, 0 -1px 2px #000, 0 1px 2px #000, -1px 2px 2px #000;
+            font-weight: 600;
+        }
+        b {
+            text-shadow: 1px 2px 2px #000, 0 -1px 2px #000, 0 1px 2px #000, -1px 2px 2px #000;
+            font-weight: 600;
         }
     }
     .locationscontainer {
         p {
             color: white;
+            text-shadow: 1px 2px 2px #000, 0 -1px 2px #000, 0 1px 2px #000, -1px 2px 2px #000;
+            font-weight: 600;
         }
     }
     .techniquecontainer {
@@ -69,21 +96,25 @@
             display: flex;
             color: white;
             grid-template-columns: 1fr 1fr;
-            width: 80%;
+            width: 96%;
             -webkit-box-shadow: 3px 3px 15px 0px #000000; 
             box-shadow: 3px 3px 15px 0px #000000;
             gap: 1rem;
             border-radius: 8px;
-            margin: 0.5rem auto;
+            background-color: #1bd1d4;
+            margin: 0.3rem auto;
             b {
                 text-align: center;
                 margin: auto;
+                text-shadow: 1px 2px 2px #000, 0 -1px 2px #000, 0 1px 2px #000, -1px 2px 2px #000;
+                font-weight: 600;
+                font-size: 1.1rem;
             }
             div {
-                width: 40%;
+                width: 30%;
                 border: none;
                 img {
-                    width: 40%;
+                    width: 50%;
                 }
             }
         }
@@ -93,23 +124,37 @@
     .weaknesscontainer {
         color: white;
        .strongagainst {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        display: flex;
         -webkit-box-shadow: 3px 3px 15px 0px #000000; 
         box-shadow: 3px 3px 15px 0px #000000;
+        background-color: #1bd1d4;
         border-radius: 8px;
         img {
-            width: 40%;
+            max-width: 25vw;
         }
        }
+       .strongtext {
+        color: limegreen;
+        text-shadow: 1px 2px 2px #000, 0 -1px 2px #000, 0 1px 2px #000, -1px 2px 2px #000;
+        font-weight: 600;
+        font-size: 1rem;
+
+       }
+       .weaktext {
+        color: tomato;
+        text-shadow: 1px 2px 2px #000, 0 -1px 2px #000, 0 1px 2px #000, -1px 2px 2px #000;
+        font-weight: 600;
+        font-size: 1rem;
+       }
        .weakagainst {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        display: flex;
         -webkit-box-shadow: 3px 3px 15px 0px #000000; 
         box-shadow: 3px 3px 15px 0px #000000;
         border-radius: 8px;
+        background-color: #1bd1d4;
         img {
-            width: 40%;
+            max-width: 30vw;
+            height: auto;
         }
        }
     }

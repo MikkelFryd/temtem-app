@@ -50,17 +50,17 @@ export const Details = (props) => {
     return (
       <>
       <div>
-        <h5>Strong against:</h5>
-        <div className={Style.strongagainst}>
-        {cleanedStrength.map((item) => handleIcon(item.key))}
+        <h5 className={Style.strongtext}>Strong against:</h5>
+          <div className={Style.strongagainst}>
+          {cleanedStrength.map((item) => handleIcon(item.key))}
+          </div>
         </div>
+      <div>
+        <h5 className={Style.weaktext}>Weak against:</h5>
+          <div className={Style.weakagainst}>
+          {cleanedWeakness.map((item) => handleIcon(item.key))}
+          </div>
         </div>
-        <div>
-        <h5>Weak against:</h5>
-        <div className={Style.weakagainst}>
-        {cleanedWeakness.map((item) => handleIcon(item.key))}
-        </div>
-      </div>
       </>
     )
   }
@@ -101,14 +101,14 @@ export const Details = (props) => {
       </div>
       <ul>
         <h4>Stats</h4>
-        <li>atk: {props.stats.atk}</li>
-        <li>def: {props.stats.def}</li>
-        <li>hp: {props.stats.hp}</li>
-        <li>spatk: {props.stats.spatk}</li>
-        <li>spd: {props.stats.spd}</li>
-        <li>spdef: {props.stats.spdef}</li>
-        <li>sta: {props.stats.sta}</li>
-        <b>Total: {props.stats.total}</b>
+        <li>atk {props.stats.atk}</li>
+        <li>def {props.stats.def}</li>
+        <li>hp {props.stats.hp}</li>
+        <li>spatk {props.stats.spatk}</li>
+        <li>spd {props.stats.spd}</li>
+        <li>spdef {props.stats.spdef}</li>
+        <li>sta {props.stats.sta}</li>
+        <b>Total {props.stats.total}</b>
       </ul>
       <figcaption>
         <div className={Style.typecontainer}>

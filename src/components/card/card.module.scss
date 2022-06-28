@@ -6,7 +6,8 @@
     margin: auto;
     padding: 0.2rem;
     border-radius: 8px;
-    background-color: #333;
+    background-color: #2a2a2a;
+    overflow: hidden;
     img {
         width: 50%;
         height: auto;
@@ -18,18 +19,21 @@
         padding: 8px;
         border-radius: 8px;
         border: none;
-        background-color: turquoise;
+        background-color: #1bd1d4;
         color: white;
+        text-shadow: 1px 2px 2px #000, 0 -1px 2px #000, 0 1px 2px #000, -1px 2px 2px #000;
     }
     h2 {
         margin: 0;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         color: white;
-        font-weight: 400;
+        font-weight: 600;
+        text-shadow: 1px 2px 2px #000, 0 -1px 2px #000, 0 1px 2px #000, -1px 2px 2px #000;
     }
     figcaption {
         color: white;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         margin: 4px;
+        width: 100%;
     }
 }
