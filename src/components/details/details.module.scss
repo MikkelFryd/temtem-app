@@ -1,44 +1,56 @@
 
 .backside {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    max-width: 400px;
+    width: 95%;
     margin: auto;
     padding: 4px;
     background-color: white;
     border-radius: 8px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    opacity: 90%;
+    margin: auto;
+    background-color: #333;
     ul {
         list-style: none;
         padding: 4px;
-        color: #333;
+        color: white;
         align-items: center;
-        border: 1px solid #333;
+        -webkit-box-shadow: 3px 3px 15px 0px #000000; 
+        box-shadow: 3px 3px 15px 0px #000000;
         border-radius: 8px;
         margin: 4px;
-        justify-content: center;
+        display: flex;
+        gap: 0.3rem;
+        width: 94%;
+        font-size: 0.8rem;
         h4 {
-            color: #333;
+            color: white;
             margin: 8px;
         }
     }
     .evolutioncontainer {
         display: grid;
-        color: #333;
-        padding: 4px;
+        color: white;
+        padding: 0.3rem;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 1rem;
+        -webkit-box-shadow: 3px 3px 15px 0px #000000; 
+        box-shadow: 3px 3px 15px 0px #000000;
+        margin-bottom: 0.5rem;
+        border-radius: 8px;
         p {
             margin: 0;
-            color: #333;
+            color: white;
         }
     }
     .locationscontainer {
         p {
-            color: black;
+            color: white;
         }
     }
     .techniquecontainer {
         display: grid;
-        color: #333;
+        color: white;
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
         margin-bottom: 4px;
@@ -48,19 +60,57 @@
     }
     .traitscontainer {
         display: grid;
-        color: #333;
+        color: white;
         grid-template-columns: 1fr 1fr;
     }
-    .typescontainer {
-        display: grid;
-        color: #333;
-        grid-template-columns: 1fr 1fr;
-        b {
-            text-align: center;
-            margin: auto;
+    .typecontainer {
+        
+        .typescontainer {
+            display: flex;
+            color: white;
+            grid-template-columns: 1fr 1fr;
+            width: 80%;
+            -webkit-box-shadow: 3px 3px 15px 0px #000000; 
+            box-shadow: 3px 3px 15px 0px #000000;
+            gap: 1rem;
+            border-radius: 8px;
+            margin: 0.5rem auto;
+            b {
+                text-align: center;
+                margin: auto;
+            }
+            div {
+                width: 40%;
+                border: none;
+                img {
+                    width: 40%;
+                }
+            }
         }
+
     }
+    
     .weaknesscontainer {
-        color: black;
+        color: white;
+       .strongagainst {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        -webkit-box-shadow: 3px 3px 15px 0px #000000; 
+        box-shadow: 3px 3px 15px 0px #000000;
+        border-radius: 8px;
+        img {
+            width: 40%;
+        }
+       }
+       .weakagainst {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        -webkit-box-shadow: 3px 3px 15px 0px #000000; 
+        box-shadow: 3px 3px 15px 0px #000000;
+        border-radius: 8px;
+        img {
+            width: 40%;
+        }
+       }
     }
 }

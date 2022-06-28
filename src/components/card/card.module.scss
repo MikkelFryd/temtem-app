@@ -1,17 +1,16 @@
 
 .listfigure {
-    width: 90%;
+    width: 100%;
     display: grid;
     text-align: center;
     margin: auto;
-    padding: 8px;
+    padding: 0.2rem;
     border-radius: 8px;
     background-color: #333;
     img {
         width: 50%;
         height: auto;
         margin: 10px auto;
-        background-color: white;
     }
     button {
         width: 50%;

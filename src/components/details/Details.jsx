@@ -17,9 +17,9 @@ export const Details = (props) => {
   function isEvolvable(evolution) {
     if (evolution.evolves === true) {
       console.log(evolution.evolutionTree);
-      return evolution.evolutionTree.map((item, index) => {
+      return evolution.evolutionTree.map((item) => {
         return (
-          <div key={index} className={Style.evolutioncontainer}>
+          <div className={Style.evolutioncontainer}>
             <b>Evolution:</b>
             <p>Name: {item.name}</p>
             <p>Stage: {item.stage + 1}</p>
@@ -48,12 +48,20 @@ export const Details = (props) => {
     console.log("CleanedStrength:", cleanedStrength)
 
     return (
+      <>
       <div>
         <h5>Strong against:</h5>
+        <div className={Style.strongagainst}>
         {cleanedStrength.map((item) => handleIcon(item.key))}
+        </div>
+        </div>
+        <div>
         <h5>Weak against:</h5>
+        <div className={Style.weakagainst}>
         {cleanedWeakness.map((item) => handleIcon(item.key))}
+        </div>
       </div>
+      </>
     )
   }
 
@@ -79,8 +87,7 @@ export const Details = (props) => {
    function handleIcon(item) {
      if (item) {
        return (
-         <div className={Style.typescontainer}>
-           <b>Type: {item}</b>
+         <div className={Style.iconcontainer}>
            <img src={images[`${item}.png`]} alt={`Type: ${item}`} />
          </div>
        );
@@ -89,6 +96,9 @@ export const Details = (props) => {
 
   return (
     <figure className={Style.backside}>
+      <div>
+        <img src={props.image} alt={props.name} />
+      </div>
       <ul>
         <h4>Stats</h4>
         <li>atk: {props.stats.atk}</li>
@@ -101,10 +111,10 @@ export const Details = (props) => {
         <b>Total: {props.stats.total}</b>
       </ul>
       <figcaption>
-        <div>
+        <div className={Style.typecontainer}>
           {props.types &&
             props.types.map((item) => {
-              return (handleIcon(item));
+              return <div className={Style.typescontainer}><b>Type:</b>{handleIcon(item)}</div>;
             })}
         </div>
         <div className={Style.weaknesscontainer}>
