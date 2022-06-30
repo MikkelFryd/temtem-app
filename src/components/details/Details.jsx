@@ -20,16 +20,15 @@ export const Details = (props) => {
       return evolution.evolutionTree.map((item) => {
         return (
           <div className={Style.evolutioncontainer}>
-            <b>Evolution:</b>
-            <p>Name: {item.name}</p>
-            <p>Stage: {item.stage + 1}</p>
-            <p>Evolves at lvl: {item.level}</p>
+            <p>{item.stage + 1}</p>
+            <p>{item.name}</p>
+            <p>{item.level}</p>
           </div>
         );
       });
     }
   }
-
+  console.log(images)
   function handleMatchups(){
     let counters = props.types.map((item) => handleCounters(item)).flatMap((i) => i)
     let cleanedStrength = []
@@ -50,13 +49,13 @@ export const Details = (props) => {
     return (
       <>
       <div>
-        <h5 className={Style.strongtext}>Strong against:</h5>
+          <h5 className={Style.strongtext}>Strong against:</h5>
           <div className={Style.strongagainst}>
           {cleanedStrength.map((item) => handleIcon(item.key))}
           </div>
         </div>
       <div>
-        <h5 className={Style.weaktext}>Weak against:</h5>
+          <h5 className={Style.weaktext}>Weak against:</h5>
           <div className={Style.weakagainst}>
           {cleanedWeakness.map((item) => handleIcon(item.key))}
           </div>
@@ -82,34 +81,65 @@ export const Details = (props) => {
         
        return ({"weaknesses": weakArr, "strengths": strongArr})
       }
-
   
    function handleIcon(item) {
      if (item) {
        return (
          <div className={Style.iconcontainer}>
-           <img src={images[`${item}.png`]} alt={`Type: ${item}`} />
+           <img src={images[`${item}.png`]} alt={`Type-${item}`} />
          </div>
        );
     }
   }
 
+  function handleNumber() {
+    if(props.number < 10) {
+      return (
+        <p>{`#00${props.number}`}</p>
+      )
+    } else if (props.number < 100 && props.number > 10) {
+      return (
+        <p>{`#0${props.number}`}</p>
+      )
+    } else {
+      return <p>{`#${props.number}`}</p>
+    }
+  }
+
   return (
     <figure className={Style.backside}>
-      <div>
-        <img src={props.image} alt={props.name} />
+      <div className={Style.portraitcontainer}>
+          {handleNumber()}
+          <img src={props.lumaIcon} alt={`Luma-${props.name}`} />
       </div>
-      <ul>
-        <h4>Stats</h4>
-        <li>atk {props.stats.atk}</li>
-        <li>def {props.stats.def}</li>
-        <li>hp {props.stats.hp}</li>
-        <li>spatk {props.stats.spatk}</li>
-        <li>spd {props.stats.spd}</li>
-        <li>spdef {props.stats.spdef}</li>
-        <li>sta {props.stats.sta}</li>
-        <b>Total {props.stats.total}</b>
-      </ul>
+      <section>
+        <div className={Style.statscontainer}>
+        <h2>Stats</h2>
+          <div>
+            <h3>atk:</h3><p>{props.stats.atk}</p>
+          </div>
+          <div>
+            <h3>def:</h3><p>{props.stats.def}</p>
+          </div>
+          <div>
+            <h3>hp:</h3><p>{props.stats.hp}</p>
+          </div>
+          <div>
+            <h3>spatk:</h3><p>{props.stats.spatk}</p>
+          </div>
+          <div>
+            <h3>spd:</h3><p>{props.stats.spd}</p>
+          </div>
+          <div>
+            <h3>spdef:</h3><p>{props.stats.spdef}</p>
+          </div>
+          <div>
+            <h3>sta:</h3><p>{props.stats.sta}</p>
+          </div>
+          <div>
+            <h3>Total:</h3><p>{props.stats.total}</p>
+          </div>
+        </div>
       <figcaption>
         <div className={Style.typecontainer}>
           {props.types &&
@@ -118,13 +148,23 @@ export const Details = (props) => {
             })}
         </div>
         <div className={Style.weaknesscontainer}>
+          <div className={Style.againstcontainer}>
           {handleMatchups()}
+          </div>
         </div>
         <div className={Style.locationscontainer}>
           {props.locations &&
             props.locations.map((item, index) => {
               return <p key={index}>Location: {item.island}</p>;
             })}
+        </div>
+        <div className={Style.evolutionHeader}>
+          <h2>Evolutions: </h2>
+          <div>
+            <p>Stage:</p>
+            <p>Name:</p>
+            <p>Level:</p>
+          </div>
         </div>
         <div>{isEvolvable(props.evolution)}</div>
         <div className={Style.traitscontainer}>
@@ -145,6 +185,7 @@ export const Details = (props) => {
             })}
         </div>
       </figcaption>
+            </section>
     </figure>
   );
 };

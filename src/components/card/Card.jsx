@@ -13,6 +13,7 @@ export const Card = (props) => {
       setShowDetails(true);
     }
   }
+  console.log(props)
   return (
     <figure className={Style.listfigure}>
       {showDetails ? (
@@ -24,13 +25,15 @@ export const Card = (props) => {
           traits={props.traits}
           locations={props.locations}
           weaknessdata={props.weaknessdata}
-          image={props.image}
+          lumaIcon={props.lumaIcon}
+          number={props.number}
         />
       ) : (
         <Frontcard
           name={props.name}
           description={props.description}
           image={props.image}
+          number={props.number}
         />
       )}
       <button name="see more" onClick={toggleDetails}>See more</button>

@@ -69,6 +69,8 @@ export const ListTemTem = () => {
                 traits={item.traits}
                 locations={item.locations}
                 weaknessdata={weaknessdata}
+                lumaIcon={`https://temtem-api.mael.tech${item.lumaIcon}`}
+                number={item.number}
               />
             );
           })
@@ -87,6 +89,8 @@ export const ListTemTem = () => {
                 traits={item.traits}
                 locations={item.locations}
                 weaknessdata={weaknessdata}
+                lumaIcon={`https://temtem-api.mael.tech${item.lumaIcon}`}
+                number={item.number}
               />
             );
           })}

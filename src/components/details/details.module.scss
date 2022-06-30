@@ -5,58 +5,110 @@
     margin: auto;
     padding: 4px;
     background-color: white;
-    border-radius: 8px;
+    border-radius: 4px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: auto;
     background-color: #2a2a2a;
-    ul {
-        list-style: none;
+    .portraitcontainer {
+        width: 100%;
+        display: grid;
+        p {
+            font-family: 1rem;
+            font-size: 600;
+            color: white;
+            text-shadow: 1px 2px 2px #000, 0 -1px 2px #000, 0 1px 2px #000, -1px 2px 2px #000;
+        }
+        img {
+            width: 50%;
+        }
+    }
+    section {
         padding: 8px;
         color: white;
-        align-items: center;
-        -webkit-box-shadow: 3px 3px 15px 0px #000000; 
-        box-shadow: 3px 3px 15px 0px #000000;
+
         border-radius: 8px;
-        margin: 0.3rem auto;
-        display: flex;
-        width: 93%;
+        margin: 8px auto;
+        display: grid;
+        grid-template-columns: 40% 60%;
+        width: 90%;
         text-shadow: 1px 2px 2px #000, 0 -1px 2px #000, 0 1px 2px #000, -1px 2px 2px #000;
         font-weight: 600;
-        font-size: 1rem;
         background-color: #1bd1d4;
-        li {
-            margin: 2px;
+        h2 {
+            text-align: center;
+            font-size: 0.9rem;
         }
-        h4 {
-            color: white;
-            margin: 8px;
+        .statscontainer {
+            margin: 2px;
+            border-radius: 8px;
+            padding: 8px;
+            div {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                h3 {
+                    color: white;
+                    font-size: 0.9rem;
+                }
+            }
         }
     }
     @media screen and (max-width: 420px) {
-        ul {
+        section {
+            padding: 8px;
+            color: white;
+            margin: 0.3rem auto;
             display: grid;
-            grid-template-columns: auto auto auto;
-            width: 85%;
-            margin: auto;
-            color: #fff;
-            text-shadow: 1px 2px 2px #000, 0 -1px 2px #000, 0 1px 2px #000, -1px 2px 2px #000;
+            grid-template-columns: 30% 70%;
+            width: 90%;
             font-weight: 600;
-            font-size: 1rem;
+            background-color: #2a2a2a;
+            h2 {
+                text-align: center;
+                font-size: 0.9rem;
+            }
+            .statscontainer {
+                margin: 2px;
+                div {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    h3 {
+                        color: white;
+                        font-size: 0.9rem;
+                    }
+                }
+            }
         }
     }
+    
+    .evolutionHeader {
+        h2{
+            font-size: 1rem; 
+            font-weight: 600;
+        }
+        div{
+            display: grid;
+            grid-template-columns: 0.5fr 1fr 0.5fr;
+            
+        }
+        p{
+            text-align: center;
+        }
+    }
+
     .evolutioncontainer {
         display: grid;
         color: white;
-        padding: 0.3rem;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 1rem;
+        padding: 4px;
+        grid-template-columns: 0.5fr 1fr 1fr;
+        gap: 4px;
         -webkit-box-shadow: 3px 3px 15px 0px #000000; 
         box-shadow: 3px 3px 15px 0px #000000;
         margin-bottom: 0.5rem;
-        border-radius: 8px;
+        border-radius: 4px;
         background-color: #1bd1d4;
+        text-align: left;
         p {
-            margin: 0;
+            margin: 4px;
             color: white;
             color: #fff;
             text-shadow: 1px 2px 2px #000, 0 -1px 2px #000, 0 1px 2px #000, -1px 2px 2px #000;
@@ -65,6 +117,19 @@
         b {
             text-shadow: 1px 2px 2px #000, 0 -1px 2px #000, 0 1px 2px #000, -1px 2px 2px #000;
             font-weight: 600;
+        }
+        @media screen and (max-width: 420px) {
+            display: grid;
+            color: white;
+            grid-template-columns: 0.5fr 1fr 0.5fr;
+            justify-content: center;
+            align-items: left;
+            gap: 8px;
+            -webkit-box-shadow: 3px 3px 15px 0px #000000; 
+            box-shadow: 3px 3px 15px 0px #000000;
+            margin-bottom: 0.5rem;
+            border-radius: 4px;
+            background-color: #1bd1d4;
         }
     }
     .locationscontainer {
@@ -81,7 +146,7 @@
         gap: 1rem;
         margin-bottom: 4px;
         border: 1px solid #333;
-        border-radius: 8px;
+        border-radius: 4px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     .traitscontainer {
@@ -90,16 +155,17 @@
         grid-template-columns: 1fr 1fr;
     }
     .typecontainer {
-        
+        width: 80%;
+        margin: auto;
         .typescontainer {
             display: flex;
             color: white;
             grid-template-columns: 1fr 1fr;
-            width: 96%;
+            width: 90%;
             -webkit-box-shadow: 3px 3px 15px 0px #000000; 
             box-shadow: 3px 3px 15px 0px #000000;
             gap: 1rem;
-            border-radius: 8px;
+            border-radius: 4px;
             background-color: #1bd1d4;
             margin: 0.3rem auto;
             b {
@@ -112,8 +178,10 @@
             div {
                 width: 30%;
                 border: none;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
                 img {
-                    width: 50%;
+                    width: 100%;
                 }
             }
         }
@@ -122,39 +190,52 @@
     
     .weaknesscontainer {
         color: white;
-       .strongagainst {
-        display: flex;
-        -webkit-box-shadow: 3px 3px 15px 0px #000000; 
-        box-shadow: 3px 3px 15px 0px #000000;
-        background-color: #1bd1d4;
-        border-radius: 8px;
-        img {
-            max-width: 25vw;
+       .againstcontainer {
+        display: grid;
+        background-color: #2a2a2a;
+        border-radius: 4px;
+        margin: auto;
+        width: 90%;
+        border: none;
+        .strongagainst {
+            -webkit-box-shadow: 3px 3px 15px 0px #000000; 
+            box-shadow: 3px 3px 15px 0px #000000;
+            border-radius: 4px;
+            background-color: #1bd1d4;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            width: 90%;
+            .strongtext {
+             color: limegreen;
+             text-shadow: 1px 2px 2px #000, 0 -1px 2px #000, 0 1px 2px #000, -1px 2px 2px #000;
+             font-weight: 600;
+             font-size: 1rem;
+            }
+         img {
+             width: 30px;
+             height: 30px;
+         }
+        }
+        .weakagainst {
+            -webkit-box-shadow: 3px 3px 15px 0px #000000; 
+            box-shadow: 3px 3px 15px 0px #000000;
+            border-radius: 4px;
+            background-color: #1bd1d4;
+            width: 90%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            .weaktext {
+             color: tomato;
+             text-shadow: 1px 2px 2px #000, 0 -1px 2px #000, 0 1px 2px #000, -1px 2px 2px #000;
+             font-weight: 600;
+             font-size: 1rem;
+            }
+         img {
+             width: 30px;
+             height: 30px;
+         }
         }
        }
-       .strongtext {
-        color: limegreen;
-        text-shadow: 1px 2px 2px #000, 0 -1px 2px #000, 0 1px 2px #000, -1px 2px 2px #000;
-        font-weight: 600;
-        font-size: 1rem;
-
-       }
-       .weaktext {
-        color: tomato;
-        text-shadow: 1px 2px 2px #000, 0 -1px 2px #000, 0 1px 2px #000, -1px 2px 2px #000;
-        font-weight: 600;
-        font-size: 1rem;
-       }
-       .weakagainst {
-        display: flex;
-        -webkit-box-shadow: 3px 3px 15px 0px #000000; 
-        box-shadow: 3px 3px 15px 0px #000000;
-        border-radius: 8px;
-        background-color: #1bd1d4;
-        img {
-            max-width: 30vw;
-            height: auto;
-        }
-       }
+      
     }
 }
